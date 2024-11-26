@@ -9,9 +9,14 @@ export class CartPage {
 
     elements = {
         checkoutButton: () => this.page.locator('button[data-test="checkout"]'),
+        continueShoppingButton: () => this.page.locator('button[data-test="continue-shopping"]'),
     };
 
     async cliqueCheckoutButton() {
         await this.elements.checkoutButton().click();
+    }
+
+    async clickContinueShopping() {
+        await this.elements.continueShoppingButton().click();
     }
 }
