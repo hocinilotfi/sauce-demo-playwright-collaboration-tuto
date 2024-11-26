@@ -15,13 +15,11 @@ test.describe("chekout cart", () => {
         await loginPage.navigate();
     });
 
-    test("chekout to cart", async ({ page }) => {
+    test("chekout page cart", async ({ page }) => {
         await loginPage.login("standard_user", "secret_sauce");
         await cart.clickAddToCart()
         await cart.navigate();
         await chekout.cliqueCheckoutButton();
         await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-one.html');
-
-      
     });
 });
