@@ -19,6 +19,4 @@ export class AddToCartPage {
     async clickAddToCart() {
         await this.elements.addToCartButton().click();
     }
-
-
 }
