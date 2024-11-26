@@ -16,15 +16,15 @@ export class CheckoutInformationPage {
     };
 
 
-    async saisirFirstName() {
-        await this.elements.FirstName();
+    async saisirFirstName(firstName: string) {
+        await this.elements.FirstName().fill(firstName);
     }
     
-    async saisirLastName() {
-        await this.elements.LastName();
+    async saisirLastName(lastName: string) {
+        await this.elements.LastName().fill(lastName);
     }
-    async saisirCodePostale() {
-        await this.elements.PostaleCode();
+    async saisirCodePostale(postalCode: string) {
+        await this.elements.PostaleCode().fill(postalCode);
     }
     async cliquesBoutonContenue() {
         await this.elements.boutonContenue().click();
