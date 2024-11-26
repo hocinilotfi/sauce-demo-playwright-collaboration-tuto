@@ -15,7 +15,7 @@ test.describe("add to cart", () => {
     test("add to cart", async ({ page }) => {
         await loginPage.login("standard_user", "secret_sauce");
         await cart.clickAddToCart()
-        await cart.navigate();
+        await cart.clickCartButton();
         const item = cart.elements.cartItem();
         await expect(item).toBeVisible();
     });

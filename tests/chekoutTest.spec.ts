@@ -22,4 +22,11 @@ test.describe("chekout cart", () => {
         await chekout.cliqueCheckoutButton();
         await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-one.html');
     });
+    test("Cancel Checkout and Continue Shopping", async ({ page }) => {
+        await loginPage.login("standard_user", "secret_sauce");
+        await cart.clickAddToCart();
+        await cart.clickCartButton();
+        await chekout.clickContinueShopping();
+        await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    });
 });
