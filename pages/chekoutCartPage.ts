@@ -1,16 +1,19 @@
-import { type Locator, type Page } from '@playwright/test';
+import { type Page } from "@playwright/test";
 
-export class CartchekoutPage {
-  readonly page: Page;
-  readonly checkoutButton: Locator;
+export class CartPage {
+    readonly page: Page;
 
-  constructor(page: Page) {
-    this.page = page;
-    this.checkoutButton = page.locator('button[data-test="checkout"]');
-  }
+    constructor(page: Page) {
+        this.page = page;
+    }
+
+    elements = {
+       
+        checkoutButton: () => this.page.locator('button[data-test="checkout"]'),
+    };
 
   
-  async clickCheckoutButton() {
-    await this.checkoutButton.click();
-  }
+    async cliqueCheckoutButton() {
+        await this.elements.checkoutButton().click();
+    }
 }
