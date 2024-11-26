@@ -7,12 +7,10 @@ export class CartPage {
         this.page = page;
     }
 
-    elements = {
-       
+    elements = { 
         checkoutButton: () => this.page.locator('button[data-test="checkout"]'),
     };
 
-  
     async cliqueCheckoutButton() {
         await this.elements.checkoutButton().click();
     }
