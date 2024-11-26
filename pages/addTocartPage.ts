@@ -13,10 +13,6 @@ export class AddToCartPage {
         cartButton: () => this.page.locator('a[data-test="shopping-cart-link"]'),
     };
 
-    async navigate() {
-        await this.page.goto("https://www.saucedemo.com/cart.html");
-    }
-
     async clickAddToCart() {
         await this.elements.addToCartButton().click();
     }
