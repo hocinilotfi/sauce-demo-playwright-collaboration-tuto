@@ -10,6 +10,7 @@ export class AddToCartPage {
     elements = {
         addToCartButton: () => this.page.locator('button[data-test="add-to-cart-sauce-labs-backpack"]'),
         cartItem: () => this.page.locator('div[data-test="inventory-item"]'),
+        cartButton: () => this.page.locator('a[data-test="shopping-cart-link"]'),
     };
 
     async navigate() {
@@ -18,5 +19,9 @@ export class AddToCartPage {
 
     async clickAddToCart() {
         await this.elements.addToCartButton().click();
+    }
+
+    async clickCartButton() {
+        await this.elements.cartButton().click();
     }
 }

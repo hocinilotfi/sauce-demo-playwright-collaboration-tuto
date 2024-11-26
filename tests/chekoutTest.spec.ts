@@ -6,7 +6,7 @@ import { CartPage } from "../pages/chekoutCartPage";
 test.describe("chekout cart", () => {
     let loginPage: LoginPage;
     let cart: AddToCartPage;
-    let chekout : CartPage;
+    let chekout: CartPage;
 
     test.beforeEach(async ({ page }) => {
         loginPage = new LoginPage(page);
@@ -18,7 +18,7 @@ test.describe("chekout cart", () => {
     test("chekout page cart", async ({ page }) => {
         await loginPage.login("standard_user", "secret_sauce");
         await cart.clickAddToCart()
-        await cart.navigate();
+        await cart.clickCartButton();
         await chekout.cliqueCheckoutButton();
         await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-one.html');
     });
