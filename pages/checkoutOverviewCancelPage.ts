@@ -4,7 +4,7 @@ export class CheckoutOverviewCancell {
   private page: Page;
 
   elements = {
-    cancelButton: () => this.page.locator('[data-test="cancel"]'),
+    cancelButton: () => this.page.locator('#cancel'),
   };
 
   constructor(page: Page) {
