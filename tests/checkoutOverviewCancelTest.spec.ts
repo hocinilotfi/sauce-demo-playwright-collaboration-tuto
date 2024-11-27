@@ -5,7 +5,7 @@ import { CartPage } from "../pages/chekoutCartPage";
 import { CheckoutInformationPage } from "../pages/Checkout.Information.Page";
 import { CheckoutOverviewCancell } from "../pages/checkoutOverviewCancelPage";
 
-test.describe("Checkout overview cancel  Tests", () => {
+test.describe("Checkout overview cancel  Tests", {tag: ['tc-06','@slow']}, () => {
   let loginPage: LoginPage;
   let cart: AddToCartPage;
   let chekout: CartPage;

@@ -4,7 +4,7 @@ import { AddToCartPage } from "../pages/addTocartPage";
 import { CartPage } from "../pages/chekoutCartPage";
 import { CheckoutInformationPage } from "../pages/Checkout.Information.Page";
 
-test.describe("Checkout Information Page Tests", () => {
+test.describe("Checkout overview  Tests", {tag: ['tc-07','@smoke', '@regression', '@critical']}, () => {
   let loginPage: LoginPage;
   let cart: AddToCartPage;
   let chekout: CartPage;
@@ -18,7 +18,7 @@ test.describe("Checkout Information Page Tests", () => {
     await loginPage.navigate();
   });
 
-  test("Checkout Information Page Tests", async ({ page }) => {
+  test("Checkout overview Tests", async ({ page }) => {
     await loginPage.login("standard_user", "secret_sauce");
     await cart.clickAddToCart();
     await cart.clickCartButton();
