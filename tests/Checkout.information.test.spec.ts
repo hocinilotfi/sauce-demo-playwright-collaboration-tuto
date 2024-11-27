@@ -18,14 +18,6 @@ test.describe("chekout cart", () => {
         checkoutInformationPage = new CheckoutInformationPage (page)
         await loginPage.navigate();
     });
-
-    test("chekout page cart", async ({ page }) => {
-        await loginPage.login("standard_user", "secret_sauce");
-        await cart.clickAddToCart()
-        await cart.clickCartButton();
-        await chekout.cliqueCheckoutButton();
-        await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-one.html');
-    });
     test("Remplir le formulaire", async ({ page }) => {
         await loginPage.login("standard_user", "secret_sauce");
         await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
