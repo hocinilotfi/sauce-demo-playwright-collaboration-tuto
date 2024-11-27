@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pages/loginPage";
 import { AddToCartPage } from "../pages/addTocartPage";
 
-test.describe("add to cart", () => {
+test.describe("add to cart",  () => {
   let loginPage: LoginPage;
   let cart: AddToCartPage;
 
