@@ -4,7 +4,7 @@ import { AddToCartPage } from "../pages/addTocartPage";
 import { CartPage } from "../pages/chekoutCartPage";
 
 
-test.describe("Test continous shopping from cart",{tag: ['tc-03','@fast']}, () => {
+test.describe("Test continous shopping from cart",{tag: ['@tc-03','@fast']}, () => {
     let loginPage: LoginPage;
     let cart: AddToCartPage;
     let chekout: CartPage;
