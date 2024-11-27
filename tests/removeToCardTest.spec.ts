@@ -3,7 +3,7 @@ import { RemoveToCard } from "../pages/removeToCardPage";
 import { LoginPage } from "../pages/loginPage";
 import { AddToCartPage } from "../pages/addTocartPage";
 
-test.describe("", () => {
+test.describe("remove to card",{tag : ['tc-04','@fast']}, () => {
   let loginPage: LoginPage;
   let addToCartPage: AddToCartPage;
   let removeToCard: RemoveToCard;
