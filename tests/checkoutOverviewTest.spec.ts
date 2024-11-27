@@ -4,7 +4,7 @@ import { AddToCartPage } from "../pages/addTocartPage";
 import { CartPage } from "../pages/chekoutCartPage";
 import { CheckoutInformationPage } from "../pages/Checkout.Information.Page";
 
-test.describe("Checkout overview  Tests", {tag: ['tc-07','@smoke', '@regression', '@critical']}, () => {
+test.describe("Checkout overview  Tests", {tag: ['@tc-07','@smoke', '@regression', '@critical']}, () => {
   let loginPage: LoginPage;
   let cart: AddToCartPage;
   let chekout: CartPage;

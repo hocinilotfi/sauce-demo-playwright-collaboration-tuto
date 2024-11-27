@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pages/loginPage";
 
-test.describe("Login Tests",{tag : ['tc-14','@regression','@smoke','@critical']}, () => {
+test.describe("Login Tests",{tag : ['@tc-14','@regression','@smoke','@critical']}, () => {
   let loginPage: LoginPage;
 
   test.beforeEach(async ({ page }) => {
