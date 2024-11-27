@@ -26,11 +26,19 @@ test.describe("chekout cart", () => {
         await chekout.cliqueCheckoutButton();
         await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-one.html');
     });
-    test("Remplire le formulaire", async ({ page }) => {
+    test("Remplir le formulaire", async ({ page }) => {
+        await loginPage.login("standard_user", "secret_sauce");
+        await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+        await cart.clickAddToCart();
+        await cart.clickCartButton();
+        await expect(page).toHaveURL("https://www.saucedemo.com/cart.html");
+        await chekout.cliqueCheckoutButton();
+        await expect(page).toHaveURL("https://www.saucedemo.com/checkout-step-one.html");
         await checkoutInformationPage.saisirFirstName("sarah");
         await checkoutInformationPage.saisirLastName("klmp");
         await checkoutInformationPage.saisirCodePostale("92000");
         await checkoutInformationPage.cliquesBoutonContenue();
         await expect(page).toHaveURL("https://www.saucedemo.com/checkout-step-two.html");
     });
+    
 })
