@@ -3,7 +3,7 @@ import { LoginPage } from "../pages/loginPage";
 import { AddToCartPage } from "../pages/addTocartPage";
 import { CartPage } from "../pages/chekoutCartPage";
 
-test.describe("chekout cart", {tag: ['tc-10','@smoke', '@regression', '@critical']}, () => {
+test.describe("chekout cart", {tag: ['@tc-10','@smoke', '@regression', '@critical']}, () => {
     let loginPage: LoginPage;
     let cart: AddToCartPage;
     let chekout: CartPage;
